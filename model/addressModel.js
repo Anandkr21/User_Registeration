@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
 
 const addresSchema = mongoose.Schema({
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "users"
-    },
+    
     street: {
         type: String,
     },
@@ -22,6 +19,10 @@ const addresSchema = mongoose.Schema({
     },
     country: {
         type: String,
+    },
+    userDetail: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "users"
     },
 
 }, {
