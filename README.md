@@ -38,8 +38,8 @@ This Node.js application provides a User Registration Portal, allowing users to 
 4. Create a `.env` file in the project root directory and specify your MongoDB URI as follows:
 
    ```env
-   MONGODB_URI=your-mongodb-uri
-   PORT=8080
+   mongoURL = your-mongodb-uri
+   PORT = 8080
    ```
 
 5. Start the application:
