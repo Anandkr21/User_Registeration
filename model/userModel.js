@@ -12,10 +12,6 @@ const userSchema = mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    addresses: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'address', // Reference to the Address model
-    },
 }, {
     versionKey: false
 });

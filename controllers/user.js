@@ -29,7 +29,7 @@ const userRegistration = async (req, res) => {
     res.status(201).send({
       status: true,
       message: `${username}, you are registered successfully !`,
-      data: user
+      data: user, userAddress
     });
   } catch (error) {
     // Handle any internal server errors and send a 500 Internal Server Error
@@ -41,4 +41,14 @@ const userRegistration = async (req, res) => {
   }
 }
 
-module.exports = { userRegistration };
+const getAllUser = async(req,res) =>{
+  const alluser = await User.find()
+  res.status(200).send({
+    status:true,
+    message: "All user retrived sucessfully.",
+    data: alluser
+  })
+}
+
+module.exports = { userRegistration , getAllUser};
+
