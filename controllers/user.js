@@ -41,14 +41,24 @@ const userRegistration = async (req, res) => {
   }
 }
 
-const getAllUser = async(req,res) =>{
-  const alluser = await User.find()
-  res.status(200).send({
-    status:true,
-    message: "All user retrived sucessfully.",
-    data: alluser
-  })
+const getAllUser = async (req, res) => {
+  try {
+    // Use aggregation to join User and Address data based on userId
+    const usersWithAddresses = await User.find()
+
+    res.status(200).send({
+      status: true,
+      data: usersWithAddresses,
+    });
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      status: false,
+      message: 'Internal Server Error',
+    });
+  }
 }
 
-module.exports = { userRegistration , getAllUser};
+module.exports = { userRegistration, getAllUser };
 
