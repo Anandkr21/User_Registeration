@@ -86,7 +86,7 @@ Once the application is running, you can access it by navigating to `http://loca
 ## Author
 
 - [@Anandkr21](https://www.github.com/Anandkr21)
-- 
+
 ## Feedback
 
 If you have any feedback, please reach out to me at 📭 anandkumargupta.akg15@gmail.com
