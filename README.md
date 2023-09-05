@@ -12,6 +12,8 @@ This Node.js application provides a User Registration Portal, allowing users to 
   - [Database Schema](#database-schema)
     - [User Schema](#user-schema)
     - [Address Schema](#address-schema)
+  - [Author](#author)
+  - [Feedback](#feedback)
 
 ## Installation
 
@@ -60,7 +62,7 @@ Once the application is running, you can access it by navigating to `http://loca
 
 - **Get All Users with Addresses:** `GET /user/all`
 
-  Retrieve a list of all users with their associated address details.
+  Retrieve a list of all users.
 
 ## Database Schema
 
@@ -81,4 +83,10 @@ Once the application is running, you can access it by navigating to `http://loca
 - `userDetail` (ObjectId, ref: 'User'): Reference to the User.
 
 ---
+## Author
 
+- [@Anandkr21](https://www.github.com/Anandkr21)
+- 
+## Feedback
+
+If you have any feedback, please reach out to me at 📭 anandkumargupta.akg15@gmail.com
