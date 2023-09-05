@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// Define the Address schema
 const userSchema = mongoose.Schema({
     username: {
         type: String,
@@ -11,11 +12,16 @@ const userSchema = mongoose.Schema({
         type: Date,
         default: Date.now
     },
+    addresses: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'address', // Reference to the Address model
+    },
 }, {
     versionKey: false
 });
 
-const User = new mongoose.model('users', userSchema);
+// Create the Address model
+const User = new mongoose.model('user', userSchema);
 
 module.exports = { User };
 

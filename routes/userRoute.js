@@ -1,7 +1,10 @@
 const express = require('express');
-const {userRegistration} = require('../controllers/user')
+
+// Import the user registration controller
+const { userRegistration } = require('../controllers/user');
 const userRoute = express.Router()
 
-userRoute.post('/register', userRegistration)
+// POST route for user registration
+userRoute.post('/register', userRegistration);
 
-module.exports = {userRoute}
+module.exports = { userRoute }
